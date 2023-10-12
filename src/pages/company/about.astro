@@ -1,0 +1,32 @@
+---
+import { TextSection } from '@littlesticks/odyssey-theme-components';
+import Layout from '../../layouts/Page.astro';
+import HeroSection from '../../components/sections/heros/HeroSection.astro';
+
+const seo = {
+	title: 'About | Astro Odyssey Theme',
+	description: 'About Page',
+};
+---
+
+<Layout {seo}>
+	<HeroSection>
+		<div slot="text-container">
+			<h1 class="text-2xl md:text-5xl mb-5">Nosotros</h1>
+			<p class="mt-4">
+        Somos dos apasionados emprendedores que comparten una visión común: transformar ideas en soluciones digitales.
+        Nuestra historia comienza con un diseñador creativo y un programador web innovador, unidos por la pasión por la tecnología y el deseo de emprender.
+			</p>
+      <p class="mt-4">Nos esforzamos por fusionar la estética visual con la funcionalidad tecnológica, creando experiencias digitales excepcionales. 
+        Creemos en el poder de la colaboración y la creatividad para impulsar el éxito en un mundo cada vez más digital.</p>
+      
+		</div>
+    <picture slot="image-container" style="margin-bottom:10px">
+      <img
+        src="/assets/images/home/about.jpeg"
+        alt="Astro Odyssee"
+        id="home-hero-image"
+      />
+    </picture>
+	</HeroSection>
+</Layout>
