@@ -1,5 +1,5 @@
 ---
-import { TextSection } from '@littlesticks/odyssey-theme-components';
+import {  Button } from '@littlesticks/odyssey-theme-components';
 import Layout from '../../layouts/Page.astro';
 import HeroSection from '../../components/sections/heros/HeroSection.astro';
 
@@ -19,7 +19,10 @@ const seo = {
 			</p>
       <p class="mt-4">Nos esforzamos por fusionar la estética visual con la funcionalidad tecnológica, creando experiencias digitales excepcionales. 
         Creemos en el poder de la colaboración y la creatividad para impulsar el éxito en un mundo cada vez más digital.</p>
-      
+        <div class="flex justify-center my-5">
+          <Button slot="action-item" class="" href="https://wa.link/udn915">Contactanos</Button>
+        </div>
+
 		</div>
     <picture slot="image-container" style="margin-bottom:10px">
       <img
@@ -29,4 +32,5 @@ const seo = {
       />
     </picture>
 	</HeroSection>
+  
 </Layout>
