@@ -22,11 +22,15 @@ const { seo } = Astro.props as Props;
 	>
 		<video src="/charge.webm" muted loop autoplay playsinline></video>
 	</div>
-	<Header rightMenu navData={nav} slot="header">
-		<Button slot="action-item" class="z-0" href="https://wa.link/udn915"
+	<div  slot="header"  class=" flex justify-end ">
+	
+		<div class="m-2">
+
+			<Button slot="action-item" class="z-0" href="https://wa.link/udn915"
 			>Contactanos</Button
-		>
-	</Header>
+			>
+		</div>
+	</div>
 
 	<div>
 		<slot />
@@ -43,5 +47,5 @@ const { seo } = Astro.props as Props;
 	import gsap from 'gsap';
 	import { Power1 } from 'gsap';
 	gsap && gsap.to('.incio', { opacity: 0, delay: 2 });
-	gsap && gsap.to('.incio', { display: 'none', delay: 2.5, ease: Power1.easeInOut });
+	gsap && gsap.to('.incio', { display: 'none', delay: 3, ease: Power1.easeInOut });
 </script>
