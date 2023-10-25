@@ -17,9 +17,17 @@ const { seo } = Astro.props as Props;
 ---
 
 <Layout {seo}>
+	<div
+		class="fixed h-screen w-screen bg-white z-50  top-0 bottom-0 flex items-center justify-center incio"
+	>
+		<video src="/charge.webm" muted loop autoplay playsinline></video>
+	</div>
 	<Header rightMenu navData={nav} slot="header">
-		<Button slot="action-item" class="" href="https://wa.link/udn915">Contactanos</Button>
+		<Button slot="action-item" class="z-0" href="https://wa.link/udn915"
+			>Contactanos</Button
+		>
 	</Header>
+
 	<div>
 		<slot />
 	</div>
@@ -31,3 +39,9 @@ const { seo } = Astro.props as Props;
 		<Logo slot="logo" />
 	</Footer> -->
 </Layout>
+<script>
+	import gsap from 'gsap';
+	import { Power1 } from 'gsap';
+	gsap && gsap.to('.incio', { opacity: 0, delay: 2 });
+	gsap && gsap.to('.incio', { display: 'none', delay: 2.5, ease: Power1.easeInOut });
+</script>
